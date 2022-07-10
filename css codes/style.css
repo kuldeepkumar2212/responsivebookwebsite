@@ -1,0 +1,395 @@
+@import url('../css codes/fonts.css'); /* to include the fonts from font.css file */
+
+
+html,body{
+    margin:0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* variabels */   /*mostly used for colors with hex values whih need to be used again */
+:root{
+    /* theme font family */
+    --Abel:'Abel',cursive;
+    --Anton:'Anton',cursive;
+    --Josefin_Sans:'Josefin_Sans',cursive;
+    --Lexend_Deca:'Lexend_Deca',cursive;
+    --Livvic:'Livvic',cursive;
+    
+    /* theme colors */
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --orangish:#FF9F45;
+      
+
+    /* gradient color */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2fbd9 100%);
+    --orange: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+}
+
+
+/*-----variabels---*/
+/*global classes*/
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+a:hover{
+    color: var(--white);
+}
+ul{
+    list-style-type: none;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+h1{
+    font-family: var(--Lexend_Deca); 
+    font-size:2.1rem;
+}
+ 
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+h2{
+    font-family: var(--Lexend_Deca);
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+    font-weight: bolder;
+}
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 5vw;
+}
+/*global classes*/
+/*navbar*/
+.nav{
+    background-color: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend_Deca);  /*calling the variable abel decalred in the variabels sec */
+    font-size: 1.6rem;
+}
+.nav .nav-menu{
+    justify-content: space-between;
+}
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: end;
+    padding: 1.7rem 10%;
+    
+}
+
+.collapse{
+    height: 25rem;
+}
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+.nav .nav-items .nav-link:hover{
+    background-color: var(--orangish);
+}
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+
+/*navbar*/
+
+
+
+/*   main content   */
+
+/*     title   */
+main .site-title{
+    background: url(../images/book.jpg);
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+} 
+main .site-background{
+    padding-top: 30vh;
+    text-align: center;
+    color: var(--white);
+}
+main .site-title h1,h3{
+    margin: 0.3rem;
+}
+main .site-title .btn{
+    margin:1.8rem;
+    background: var(--orange) ;
+}
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+/*-----title-----*/
+
+/*--------famous-books----*/
+main .famousbook-heading{
+    text-align: center;
+    padding-top: 1.5rem;
+    height: 2rem;
+    color: var(--bg-color);
+}
+main .blog{
+    background: url(../images/Abract01.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: auto;
+    width: 100%;
+    background-size: 75%;
+}
+
+main .blog .blog-post{
+    padding-top: 3rem;
+}
+main .blog-post .famous-book-content{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+main .famous-book-content .book-title{
+    padding: 2rem 0;
+}
+main .famous-book-content .btn-blog{
+    padding: 1rem 1.5rem;
+    background: var(--orangish);
+    margin: 0.5rem;
+}
+main .famous-book-content .btn-blog:hover{
+    background: var(--text-gray);
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+main .famous-book-content span{
+    display: block;
+}
+
+/*-------famous-books----*/
+
+/*-------categories-------*/
+main .categories-head{
+    text-align: center;
+    padding:5vh 0;
+}
+
+main .categories-body{
+    width: 80%;
+    margin: 5vh auto;
+    text-align: left;
+    line-height: 2;
+    justify-content: center;
+    padding-bottom: 10vh;
+}
+main .design{
+    height: 220px;
+    width: 200px;
+    float: left;
+    margin-right: 10vh;
+    border-radius: 10%;
+    transition: transform .2s;
+    box-shadow: -20px +20px +10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+main .design:hover{
+    transform: scale(1.2) rotate(360deg);
+}
+ main .btn-categories{
+    background: var(--orangish);
+    margin: 1rem;
+    align-items:center;
+    color: #0f0f0f;
+    font-weight: bolder;
+ }
+ main .btn-categories:hover{
+    background: var(--text-gray);
+    border: 1px solid var(--white);
+    color: var(--white);
+ }
+
+ main .cat-container{
+    background: url(../images/Abract01mirror.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: auto;
+    width: 100%;
+    background-size: 100%;
+ }
+
+/*-------categories-------*/
+/*----main content----*/
+
+/*-----footer------*/
+.foot{
+    height: 100%;
+    background: #0f0f0f;
+    position: relative;
+    padding: 2  rem;
+}
+.foot .foot-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);   /*assigns equal space to all the parts with respect to the viewpost*/
+    padding:0 3%;
+}
+
+footer .foot .foot-container > div{
+    flex-grow: 1;   /*used to specify the amount the item will grown inside the conatainer*/
+    flex-basis: 0;  /* used to specify the initial width of the flexile item*/
+    padding: 3rem .9rem;
+}
+
+.foot .foot-container .about-us h2{
+    color: #ffffff;
+}
+.foot .foot-container .about-us p{
+    color: var(--text-gray);
+}
+.foot .foot-container .contact-us h2{
+    color: #ffffff;
+}
+.foot .foot-container .contact-us p{
+    color: var(--text-gray);
+}
+
+.foot .foot-container .btn-contact{
+    color: var(--bg-color);
+    background: var(--orangish);
+    border-radius: 70%;
+}
+.foot .foot-container .btn-contact:hover{
+    color: var(--white);
+    background: var(--sky);
+    border-color: #0f0f0f;
+    border-radius: 70%;
+}
+.foot .foot-container .queries h2{
+    color: var(--white);
+}
+.foot .foot-container .queries p{
+    color: var(--text-gray);
+}
+.foot .contact-us div > img{
+    display: inline-block;
+    max-width: 20%;
+    height: auto;
+    margin: .5rem .5rem;
+    border-radius: 8%;
+    transition: transform .2s;
+}
+.foot .contact-us div > img:hover{
+    transform: scale(1.2);
+    box-shadow: -10px 10px 5px rgba(0,0,0,0.5);
+}
+.foot .rights{
+    justify-content: center;
+    color: var(--text-gray);
+}
+.foot .move-up{
+    position: absolute;
+    top: 50%;
+    right:6%;
+}
+.foot .move-up span{
+    color: var(--text-gray);
+    size: 10%;
+}
+.foot .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+.foot .foot-container .OURSELVES{
+    color: var(--orangish);
+}
+.foot .foot-container .happy{
+    color: var(--orangish);
+    font-family: monospace;
+}
+/*---!--footr----!--*/
+
+/* viewport <=750px  */
+@media only screen and (max-width:750px){
+.nav .nav-menu,.nav .nav-items{
+    flex-direction : column;
+    
+}
+.nav .nav-items{
+   text-align: center;
+}
+.nav .nav-items .nav-link:hover{
+    background-color: var(--orangish);
+}
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+}
+.nav .toggle-collapse{
+    display: initial;
+}         
+.foot .foot-container{
+    justify-content: center;
+    grid-template-columns: repeat(1,1fr);
+}
+}
+ /* media query is used to show how it looks when the website is less than 750px in this case*/
+/* ------!-------viewport <=750px-----------!------  */
+
+
+/* -------------viewport <=321px-----------------  */
+@media only screen and (max-width:321px)
+{
+    main .famous-book-content .btn-blog{
+        padding: 1rem 0.7rem;
+}   
+}
+/* -------------viewport <=321px-----------------  */
